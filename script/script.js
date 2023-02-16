@@ -71,7 +71,7 @@ console.log(jhonsBMI);
 if (marksBMI > jhonsBMI) {
   console.log(`marksBMI is higher ${parseInt(marksBMI)}`);
 } else {
-  console.log(`jhonsBMI is higher ${parseInt(jhonsBMI)}`);
+  console.log(`jhonsBMI is higher ${jhonsBMI.toFixed(1)}`); //  .toFixed(how many decimals u want) jsMETHOD
 }
 
 if (population > averagePopulation) {
