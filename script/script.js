@@ -83,3 +83,61 @@ if (population > averagePopulation) {
     } million below average`
   );
 }
+
+//TYPE CONVERSION & COERCION
+
+//**All the input we get are always string type
+
+//string to number//
+let val = "66";
+console.log(val);
+console.log(typeof val); // --> string
+
+val = Number(val);
+console.log(val);
+console.log(typeof val); // --> number
+
+let name1 = "kesav";
+console.log(name1);
+console.log(typeof name1); // --> string
+
+name1 = Number(name1); // when we are converting non-numerical strings to number it will be NaN
+console.log(name1); // -->it show NaN .  Nan is also number Datatype
+console.log(typeof name1); // -->number
+
+// string to boolean//
+//Boolean()
+
+let length = "112";
+console.log(length);
+
+length = Boolean(length);
+console.log(length); // ---> true
+console.log(typeof length);
+
+let district = "coimbatore";
+console.log(district);
+
+district = Boolean(district);
+console.log(length); // ---> true
+console.log(typeof district);
+
+let emptySpaceGiven = " ";
+console.log(emptySpaceGiven);
+
+emptySpaceGiven = Boolean(emptySpaceGiven);
+console.log(emptySpaceGiven); // ---> true
+console.log(typeof emptySpaceGiven);
+
+let emptySpaceNotGiven = "";
+console.log(emptySpaceNotGiven);
+
+emptySpaceNotGiven = Boolean(emptySpaceNotGiven);
+console.log(emptySpaceNotGiven); // -->false
+console.log(typeof emptySpaceNotGiven);
+
+// if ("55" > "49") {
+//   console.log(true);
+// } else {
+//   console.log(false);
+// }
