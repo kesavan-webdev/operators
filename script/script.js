@@ -136,6 +136,62 @@ emptySpaceNotGiven = Boolean(emptySpaceNotGiven);
 console.log(emptySpaceNotGiven); // -->false
 console.log(typeof emptySpaceNotGiven);
 
+// coding challenge3
+
+let averageScoreOfDolphins = (96 + 108 + 89) / 3;
+let averageScoreOfKoalas = (88 + 91 + 110) / 3;
+
+if (averageScoreOfDolphins > averageScoreOfKoalas) {
+  console.log(` Dolphins ${averageScoreOfDolphins} are winners`);
+} else if (averageScoreOfDolphins < averageScoreOfKoalas) {
+  console.log(` Koalas ${averageScoreOfKoalas} are winners`);
+} else if (averageScoreOfDolphins === averageScoreOfKoalas) {
+  console.log(`Match Drawn`);
+} else {
+  console.log(`no result`);
+}
+//bonus1
+
+averageScoreOfDolphins = (97 + 112 + 101) / 3;
+averageScoreOfKoalas = (109 + 95 + 123) / 3;
+if (
+  averageScoreOfDolphins > averageScoreOfKoalas &&
+  averageScoreOfDolphins >= 100
+) {
+  console.log(` Dolphins ${averageScoreOfDolphins} are winners`);
+} else if (
+  averageScoreOfDolphins < averageScoreOfKoalas &&
+  averageScoreOfKoalas >= 100
+) {
+  console.log(` Koalas ${averageScoreOfKoalas} are winners`);
+} else if (averageScoreOfDolphins === averageScoreOfKoalas) {
+  console.log(`Match Drawn`);
+} else {
+  console.log(`no result`);
+}
+
+//bonus2
+averageScoreOfDolphins = (95 + 109 + 109) / 3;
+averageScoreOfKoalas = (109 + 95 + 109) / 3;
+if (
+  averageScoreOfDolphins > averageScoreOfKoalas &&
+  averageScoreOfDolphins >= 100
+) {
+  console.log(` Dolphins ${averageScoreOfDolphins} are winners`);
+} else if (
+  averageScoreOfDolphins < averageScoreOfKoalas &&
+  averageScoreOfKoalas >= 100
+) {
+  console.log(` Koalas ${averageScoreOfKoalas} are winners`);
+} else if (
+  averageScoreOfDolphins === averageScoreOfKoalas &&
+  averageScoreOfDolphins >= 100 &&
+  averageScoreOfKoalas >= 100
+) {
+  console.log(`Match Drawn`);
+} else {
+  console.log(`no result`);
+}
 // if ("55" > "49") {
 //   console.log(true);
 // } else {
