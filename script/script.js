@@ -192,6 +192,29 @@ if (
 } else {
   console.log(`no result`);
 }
+
+//coding challenge4
+
+let bill = 275;
+let tip = bill * 0.15;
+let tipValue = bill * 0.2;
+if (bill >= 50 && bill <= 300) {
+  console.log(`bill value ${bill} tip ${tip} total bill ${bill + tip}`);
+} else {
+  console.log(
+    `bill value ${bill} tip ${tipValue} total bill ${bill + tipValue}`
+  );
+}
+
+//ternary operator
+bill = 600;
+
+bill >= 50 && bill <= 300
+  ? console.log(`bill value ${bill} tip ${tip} total bill ${bill + tip}`)
+  : console.log(
+      `bill value ${bill} tip ${tipValue} total bill ${bill + tipValue}`
+    );
+
 // if ("55" > "49") {
 //   console.log(true);
 // } else {
