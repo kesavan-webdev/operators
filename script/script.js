@@ -403,3 +403,111 @@ tips.push(calcTip(bills[2]));
 
 console.log(bills);
 console.log(tips);
+console.log(typeof bills); //type of array is object
+
+// OBJECTS --are mutable and key-value pair
+
+let myCountry = {
+  country: "india",
+  capital: "newdelhi",
+  language: [
+    "tamil",
+    "hindhi",
+    "telugu",
+    "kannada",
+    "malayalam",
+    "english",
+    "etc",
+  ],
+  population: 2400,
+  neighbours: ["pakistan", "china", "nepal", "srilanka", "bangladesh"],
+};
+
+console.log(
+  `${myCountry.country} has ${myCountry.population} millon ${myCountry.language}-speaking people, ${myCountry.neighbours.length} neighbouring countries and a capital called ${myCountry.capital}`
+);
+
+//accessing the object
+
+//dot notation
+myCountry.population = 600;
+console.log(`${myCountry.population}`);
+
+//bracket notation
+myCountry["population"] = 2100;
+console.log(myCountry["population"]);
+
+//object method ----inside a object we use function
+
+let myCountry2 = {
+  country: "india",
+  capital: "newdelhi",
+  language: [
+    "tamil",
+    "hindhi",
+    "telugu",
+    "kannada",
+    "malayalam",
+    "english",
+    "etc",
+  ],
+  population: 2400,
+  neighbours: ["pakistan", "china", "nepal", "srilanka", "bangladesh"],
+
+  describe: function () {
+    console.log(
+      `${myCountry.country} has ${myCountry.population} millon ${myCountry.language}-speaking people, ${myCountry.neighbours.length} neighbouring countries and a capital called ${myCountry.capital}`
+    );
+  },
+};
+
+myCountry2.describe();
+
+//use this keyword  always when we are writing methods in object {inside a object this keyword refers to an that self object  }
+
+let myCountry3 = {
+  country: "india",
+  capital: "newdelhi",
+  language: [
+    "tamil",
+    "hindhi",
+    "telugu",
+    "kannada",
+    "malayalam",
+    "english",
+    "etc",
+  ],
+  population: 2400,
+  neighbours: ["pakistan", "china", "nepal", "srilanka", "bangladesh"],
+
+  describe: function () {
+    console.log(
+      `${this.country} has ${this.population} millon ${this.language}-speaking people, ${this.neighbours.length} neighbouring countries and a capital called ${this.capital}`
+    );
+  },
+  checkIsland: function () {
+    console.log(this.neighbours.length ? true : false);
+  },
+};
+
+myCountry3.describe();
+myCountry3.checkIsland();
+
+let bmiCalc = {
+  fullName: null,
+  mass: null,
+  height: null,
+
+  calcBmi: function () {
+    return this.mass / (this.height * this.height);
+  },
+};
+bmiCalc.fullName = "mark miller";
+bmiCalc.mass = 50;
+bmiCalc.height = 160;
+
+bmiCalc.fullName = "jhon smith";
+bmiCalc.mass = 90;
+bmiCalc.height = 175;
+
+bmiCalc.calcBmi();
