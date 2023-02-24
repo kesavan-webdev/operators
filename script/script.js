@@ -493,6 +493,8 @@ let myCountry3 = {
 myCountry3.describe();
 myCountry3.checkIsland();
 
+// coding challenge7
+
 let bmiCalc = {
   fullName: null,
   mass: null,
@@ -503,11 +505,64 @@ let bmiCalc = {
   },
 };
 bmiCalc.fullName = "mark miller";
-bmiCalc.mass = 50;
-bmiCalc.height = 160;
-
+bmiCalc.mass = 78;
+bmiCalc.height = 1.69;
+let markMillerBmi = bmiCalc.calcBmi().toFixed(1);
+console.log(bmiCalc.calcBmi().toFixed(1));
 bmiCalc.fullName = "jhon smith";
-bmiCalc.mass = 90;
-bmiCalc.height = 175;
+bmiCalc.mass = 92;
+bmiCalc.height = 1.95;
+let jhonSmithBmi = bmiCalc.calcBmi().toFixed(1);
+console.log(bmiCalc.calcBmi().toFixed(1));
 
-bmiCalc.calcBmi();
+if (markMillerBmi > jhonSmithBmi) {
+  console.log(
+    `marks's Bmi is ${markMillerBmi} is greater than jhon's Bmi ${jhonSmithBmi}`
+  );
+} else {
+  `jhon's Bmi is ${jhonSmithBmi} is greater than mark's Bmi ${markMillerBmi}`;
+}
+
+//LOOPS Or ITERATIONS
+
+//for loop
+
+for (i = 1; i <= 50; i++) {
+  console.log(`number ${i}:  voter no${i} is currently voting`);
+}
+
+// coding challenge 8
+// Test data: 22, 295, 176, 440, 37, 105, 10, 1100, 86 and 52
+
+let billsArray = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+let tipsArray = [];
+let totalArray = [];
+
+let calcTipArray = (billvalue) => {
+  if (billvalue >= 50 && billvalue <= 300) {
+    console.log(
+      `bill value ${billvalue} tip ${billvalue * 0.15} total bill ${
+        billvalue + billvalue * 0.15
+      }`
+    );
+    tipsArray.push(billvalue * 0.15);
+    totalArray.push(billvalue + billvalue * 0.15);
+
+    return billvalue * 0.15;
+  } else {
+    console.log(
+      `bill value ${billvalue} tip ${billvalue * 0.2} total bill ${
+        billvalue + billvalue * 0.2
+      }`
+    );
+    tipsArray.push(billvalue * 0.2);
+    totalArray.push(billvalue + billvalue * 0.2);
+    return billvalue * 0.2;
+  }
+};
+for (i = 0; i < billsArray.length; i++) {
+  calcTipArray(billsArray[i]);
+}
+console.log(`bill :`, billsArray);
+console.log(`tips :`, tipsArray);
+console.log(`Total :`, totalArray);
