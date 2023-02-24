@@ -397,6 +397,7 @@ calcTip(100);
 
 let bills = [125, 555, 44];
 let tips = [];
+
 tips.push(calcTip(bills[0]));
 tips.push(calcTip(bills[1]));
 tips.push(calcTip(bills[2]));
@@ -566,3 +567,7 @@ for (i = 0; i < billsArray.length; i++) {
 console.log(`bill :`, billsArray);
 console.log(`tips :`, tipsArray);
 console.log(`Total :`, totalArray);
+
+//bonus challenge
+let arr = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+let calcAverage = (arr) => {};
